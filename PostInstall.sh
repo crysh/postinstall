@@ -49,12 +49,11 @@ wget -O ~/Downloads/teamviewer.deb "https://download.teamviewer.com/download/lin
 sudo apt install ~/Downloads/teamviewer.deb -y
 
 # Utilities
-sudo apt install exa htop ssh git zsh bleachbit openconnect screenfetch nautilus-dropbox \
+sudo apt install htop ssh git openconnect bleachbit screenfetch nautilus-dropbox \
 ubuntu-restricted-extras virtualbox virtualbox-guest-additions-iso samba docker.io \
 catfish filezilla liferea clementine terminator gufw conky xfonts-terminus openshot \
 p7zip-full gnome-tweak-tool chromium-browser flashplugin-installer ulauncher pulseaudio-equalizer \
-dconf-editor powershell tmux cifs-utils libreoffice network-manager-openconnect-gnome \
-autokey-gtk zsh -y
+dconf-editor tmux cifs-utils libreoffice network-manager-openconnect-gnome autokey-gtk zsh -y
 
 # Text Editors
 sudo apt install sublime-text typora code -y
@@ -139,12 +138,12 @@ gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Primary>
 sudo rm -rf /usr/share/gnome-shell/extensions/ubuntu-dock@ubuntu.com
 
 # Add favorites to Dock
-gsettings set org.gnome.shell favorite-apps "['chromium-browser.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.tweaks.desktop', 'org.remmina.Remmina.desktop', 'spotify.desktop', 'mailspring.desktop', 'code.desktop', 'sublime_text.desktop', 'firefox.desktop']"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.tweaks.desktop', 'org.remmina.Remmina.desktop', 'spotify.desktop', 'mailspring.desktop', 'code.desktop', 'sublime_text.desktop', 'firefox.desktop']"
 
 # Change color of lock screen
-sudo sed -i '1985s/6D2169/0B1E28/' /etc/alternatives/gdm3.css
-sudo sed -i '1986s/370026/0B1E28/' /etc/alternatives/gdm3.css
-sudo sed -i '2015s/2C001E/0B1E28/' /etc/alternatives/gdm3.css
+cd ~/Downloads
+wget -qO - https://github.com/PRATAP-KUMAR/focalgdm3/archive/TrailRun.tar.gz | tar zx --strip-components=1 focalgdm3-TrailRun/focalgdm3
+sudo ./focalgdm3 \#0B1E28
 
 # Install autokey-gtk
 echo "[D-BUS Service]\nName=org.autokey.Service\nExec=/usr/bin/autokey" | sudo tee /usr/share/dbus-1/services/org.autokey.Service
