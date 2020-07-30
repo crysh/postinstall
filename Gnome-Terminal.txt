@@ -1,0 +1,12 @@
+[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+use-system-font=false
+default-size-rows=40
+default-size-columns=160
+use-theme-colors=false
+visible-name='Default'
+scrollback-unlimited=true
+font='IBM Plex Mono weight=453 11'
+cursor-shape='ibeam'
+foreground-color='#b3b3b8b8c3c3'
+palette=['#000000000000', '#b0b04b4b5757', '#8787b3b37979', '#e5e5c1c17979', '#7d7d8f8fa4a4', '#a4a479799696', '#8585a7a7a5a5', '#b3b3b8b8c3c3', '#000000000000', '#b0b04b4b5757', '#8787b3b37979', '#e5e5c1c17979', '#7d7d8f8fa4a4', '#a4a479799696', '#8585a7a7a5a5', '#ffffffffffff']
+background-color='#202024242d2d'
