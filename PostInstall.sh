@@ -46,10 +46,14 @@ sudo apt install default-jre icedtea-netx -y
 
 # Teamviewer
 wget -O ~/Downloads/teamviewer.deb "https://download.teamviewer.com/download/linux/teamviewer_amd64.deb"
-sudo apt install ~/Downloads/teamviewer.deb -y
+sudo dpkg -i ~/Downloads/teamviewer.deb -y
+
+# Zoom
+wget -O ~/Downloads/zoom.deb "https://zoom.us/client/latest/zoom_amd64.deb"
+sudo dpkg -i ~/Downloads/zoom.deb -y
 
 # Utilities
-sudo apt install htop ssh git openconnect bleachbit screenfetch nautilus-dropbox \
+sudo apt install ansible speedtest-cli htop ssh git openconnect bleachbit screenfetch \
 ubuntu-restricted-extras virtualbox virtualbox-guest-additions-iso samba docker.io \
 catfish filezilla liferea clementine terminator gufw conky xfonts-terminus openshot \
 p7zip-full gnome-tweak-tool chromium-browser flashplugin-installer ulauncher pulseaudio-equalizer \
@@ -227,6 +231,8 @@ sudo sed -i 's/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD: ALL/g' /etc/su
 # Package management in Sublime
 # Color scheme in Sublime
 # Import/export Remmina connections
+# Add OCS URL handling helper
+# Pick new theme and install
 
 # Fix audio
 # Copy Dropbox/Backup/Linux/default.pa to /etc/pulse/default.pa
